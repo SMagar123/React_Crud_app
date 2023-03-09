@@ -21,6 +21,9 @@ const AddUsers = () => {
   const [userInfo, setUserInfo] = useState(initialValues);
   const navigate = useNavigate();
   const handleUserInput = (e) => {
+    if (e.target.value.length < 2) {
+      alert("helo");
+    }
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
   const addUserDetails = async () => {
@@ -36,7 +39,7 @@ const AddUsers = () => {
       </FormControl>
       <FormControl>
         <InputLabel>Email</InputLabel>
-        <Input onChange={(e) => handleUserInput(e)} name="email" />
+        <Input onChange={(e) => handleUserInput(e)} type="email" name="email" />
       </FormControl>
       <FormControl>
         <InputLabel>Phone Number</InputLabel>
@@ -47,7 +50,11 @@ const AddUsers = () => {
         <Input onChange={(e) => handleUserInput(e)} name="address" />
       </FormControl>
       <FormControl>
-        <Button onClick={() => addUserDetails()} variant="contained">
+        <Button
+          onClick={() => addUserDetails()}
+          variant="contained"
+          style={{ backgroundColor: " #482880" }}
+        >
           Add User
         </Button>
       </FormControl>

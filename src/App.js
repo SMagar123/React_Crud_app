@@ -1,6 +1,6 @@
 import "./App.css";
 import AddUsers from "./components/AddUsers";
-import Logo from "./components/Logo";
+import Logo from "./components/Home";
 import Navbar from "./components/Navbar";
 import Users from "./components/Users";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

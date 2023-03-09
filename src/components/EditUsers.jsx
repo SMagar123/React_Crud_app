@@ -71,7 +71,11 @@ const EditUsers = () => {
         />
       </FormControl>
       <FormControl>
-        <Button onClick={() => addUserDetails()} variant="contained">
+        <Button
+          onClick={() => addUserDetails()}
+          variant="contained"
+          style={{ backgroundColor: " #482880" }}
+        >
           Update Information
         </Button>
       </FormControl>
