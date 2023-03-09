@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "Rudra Pulami Magar",
+      "email": "rudra@gmail.com",
+      "phonenumber": "976543245",
+      "address": "Balaju",
+      "id": 5
+    },
+    {
+      "name": "Adam Smith",
+      "email": "adam@gmail.com",
+      "phonenumber": "9876234562",
+      "address": "london",
+      "id": 6
+    },
+    {
+      "name": "Asim Nepali",
+      "email": "asimnepal@gmail.com",
+      "phonenumber": "98765433245",
+      "address": "Nepalgunj,Nepal",
+      "id": 7
+    }
+  ]
+}
