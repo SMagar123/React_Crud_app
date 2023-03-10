@@ -16,6 +16,7 @@ const initialValues = {
   email: "",
   phonenumber: "",
   address: "",
+  month: "",
 };
 
 const EditUsers = () => {
@@ -79,6 +80,14 @@ const EditUsers = () => {
           onChange={(e) => handleUserInput(e)}
           name="address"
           value={userInfo.address}
+        />
+      </FormControl>
+      <FormControl>
+        <InputLabel>Assigned Month</InputLabel>
+        <Input
+          onChange={(e) => handleUserInput(e)}
+          name="month"
+          value={userInfo.month}
         />
       </FormControl>
       <FormControl>

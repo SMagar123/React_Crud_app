@@ -11,6 +11,7 @@ const Navbar = () => {
           <Tabs to="/">Home</Tabs>
           <Tabs to="/users">Users</Tabs>
           <Tabs to="/addusers">Add User</Tabs>
+          <Tabs to="/about">About</Tabs>
         </NavItems>
       </Header>
     </div>
