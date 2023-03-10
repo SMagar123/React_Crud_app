@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <Header position="static">
+      <Header position="fixed">
         <NavItems>
           <Tabs to="/">PLAYUSERDATA</Tabs>
           <Tabs to="/">Home</Tabs>

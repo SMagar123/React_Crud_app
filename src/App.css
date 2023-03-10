@@ -2,4 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+.footer{
+    text-align: center;
+    padding: 1em;
+    margin: 2em auto auto auto;
+    background-color: #330e62;
+    color: white;
 }

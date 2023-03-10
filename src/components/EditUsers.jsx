@@ -10,6 +10,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSingleUser, editUser } from "../service/api";
+import editimage from "../images/user_edit.png";
 const initialValues = {
   name: "",
   email: "",
@@ -37,7 +38,17 @@ const EditUsers = () => {
   };
   return (
     <Container>
-      <Typography variant="h5">Edit User</Typography>
+      <div style={{ textAlign: "center" }}>
+        <img
+          src={editimage}
+          alt="image_edit"
+          style={{ height: "100px", width: "100px", borderRadius: "50%" }}
+        />
+      </div>
+
+      <Typography variant="h5" align="center" style={{ fontWeight: "bold" }}>
+        Edit User
+      </Typography>
       <FormControl>
         <InputLabel>Name</InputLabel>
         <Input
@@ -86,7 +97,7 @@ const EditUsers = () => {
 export default EditUsers;
 const Container = styled(FormGroup)`
   width: 50%;
-  margin: 5% auto 0 auto;
+  margin: 5em auto auto auto;
   & > div {
     margin-top: 0.8em;
   }

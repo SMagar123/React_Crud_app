@@ -1,6 +1,6 @@
 .homeWrapper {
   width: 95%;
-  margin: auto;
+  margin: 5em auto auto auto;
 }
 
 .bodyWrapper {
@@ -33,9 +33,6 @@
   transform-origin: bottom;
   animation-name: bounce;
   animation-timing-function: linear;
-}
-.bodyWrapper .bodyImage img {
-  box-shadow: 0 0 5px gray;
 }
 @keyframes bounce {
   0% {
@@ -82,12 +79,4 @@
 }
 .features .featuresTitle span {
   font-size: 1.2rem;
-}
-
-.footer {
-  text-align: center;
-  padding: 1em;
-  margin: auto auto 1em auto;
-  background-color: #330e62;
-  color: white;
 }/*# sourceMappingURL=home.css.map */

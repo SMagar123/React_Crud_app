@@ -8,6 +8,7 @@ import {
   styled,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import addImage from "../images/users4_add.png";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../service/api";
 const initialValues = {
@@ -29,7 +30,15 @@ const AddUsers = () => {
   };
   return (
     <Container>
-      <Typography variant="h5" align="center">
+      <div style={{ textAlign: "center" }}>
+        <img
+          src={addImage}
+          alt="image_edit"
+          style={{ height: "100px", width: "100px", borderRadius: "50%" }}
+        />
+      </div>
+
+      <Typography variant="h5" align="center" style={{ fontWeight: "bold" }}>
         Add User
       </Typography>
       <FormControl>
@@ -64,7 +73,7 @@ const AddUsers = () => {
 export default AddUsers;
 const Container = styled(FormGroup)`
   width: 50%;
-  margin: 5% auto 0 auto;
+  margin: 5em auto auto auto;
   & > div {
     margin-top: 0.8em;
   }

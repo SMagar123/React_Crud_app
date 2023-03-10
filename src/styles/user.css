@@ -1,0 +1,30 @@
+.searchUsers {
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+}
+.searchUsers .userInformation {
+  font-size: 2rem;
+  color: #330e62;
+}
+.searchUsers .searchIndividualUser {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchUsers .searchIndividualUser input {
+  font-size: 1.5rem;
+  width: 85%;
+  margin: auto 2em auto auto;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(25, 4, 84);
+}
+.searchUsers .searchIndividualUser .searchIcon {
+  margin: auto -1em auto auto;
+  width: 10%;
+  height: 100%;
+  font-size: 2rem;
+  color: #330e62;
+}/*# sourceMappingURL=user.css.map */

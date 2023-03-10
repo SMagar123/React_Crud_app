@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/home.css";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import Features from "./Features";
-import Footer from "./Footer";
 const Logo = () => {
   return (
     <div className="homeWrapper">
@@ -13,7 +12,7 @@ const Logo = () => {
         </div>
         <div className="bodyImage">
           <img
-            src="https://img.freepik.com/free-vector/business-people-working-project-flat-icon_1262-18770.jpg?w=4000"
+            src="https://img.freepik.com/premium-vector/budget-data…siness-analysis-illustration_159757-43.jpg?w=2000"
             alt="Body_image"
             style={{
               width: "100%",
@@ -49,9 +48,6 @@ const Logo = () => {
         <div className="featuresBody">
           <Features />
         </div>
-      </div>
-      <div className="footer">
-        <Footer />
       </div>
     </div>
   );

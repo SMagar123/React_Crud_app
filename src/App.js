@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Users from "./components/Users";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EditUsers from "./components/EditUsers";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,9 @@ function App() {
         <Route path="/addusers" element={<AddUsers />} />
         <Route path="/edit/:id" element={<EditUsers />} />
       </Routes>
+      <div className="footer">
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

@@ -9,9 +9,11 @@ import {
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import PersonSearchRoundedIcon from "@mui/icons-material/PersonSearchRounded";
 import React, { useEffect, useState } from "react";
 import { getUsers, deleteUser } from "../service/api";
 import { Link } from "react-router-dom";
+import "../styles/user.css";
 const Users = () => {
   const tableHeader = [
     "ID",
@@ -22,6 +24,7 @@ const Users = () => {
     " ",
   ];
   const [userDetail, setUserDetail] = useState([]);
+  const [userFinding, setUserFinding] = useState("");
   useEffect(() => {
     getUsersDetails();
   }, []);
@@ -33,30 +36,50 @@ const Users = () => {
     await deleteUser(user_id);
     getUsersDetails();
   };
+  const searchUser = () => {
+    return userDetail.filter((item) => {
+      return item.name.toLowerCase().includes(userFinding);
+    });
+  };
   return (
-    <div style={{ "overflow-x": "auto" }}>
+    <div style={{ overflowX: "auto", margin: "4em auto auto auto" }}>
+      <div className="searchUsers">
+        <div className="userInformation">
+          <h2>Users Records</h2>
+        </div>
+        <div className="searchIndividualUser">
+          <div className="searchIcon">
+            <PersonSearchRoundedIcon style={{ fontSize: "3rem" }} />
+          </div>
+          <input
+            type="text"
+            placeholder="Search user by name..."
+            onChange={(e) => setUserFinding(e.target.value.toLowerCase())}
+          />
+        </div>
+      </div>
       <StyledTable>
         <TableHead>
           <StyledTHead>
-            {tableHeader.map((item) => {
-              return <TableCell>{item}</TableCell>;
+            {tableHeader.map((item, index) => {
+              return <TableCell key={index}>{item}</TableCell>;
             })}
           </StyledTHead>
         </TableHead>
         <TableBody>
-          {userDetail.map((item) => {
+          {searchUser().map((item) => {
             return (
               <StyledTBody>
-                <TableCell>{item.id}</TableCell>
-                <TableCell>{item.name}</TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>{item.phonenumber}</TableCell>
-                <TableCell>{item.address}</TableCell>
+                <TableCell key={item.id}>{item.id}</TableCell>
+                <TableCell key={item.name}>{item.name}</TableCell>
+                <TableCell key={item.email}>{item.email}</TableCell>
+                <TableCell key={item.phonenumber}>{item.phonenumber}</TableCell>
+                <TableCell key={item.address}>{item.address}</TableCell>
                 <TableCell>
                   <Button
                     variant="contained"
                     color="success"
-                    style={{ "margin-right": "5%" }}
+                    style={{ marginRight: "5%" }}
                     component={Link}
                     to={`/edit/${item.id}`}
                     endIcon={<EditIcon />}
@@ -84,7 +107,7 @@ const Users = () => {
 export default Users;
 const StyledTable = styled(Table)`
   width: 90%;
-  margin: 3% auto 0 auto;
+  margin: auto auto 0 auto;
   border: 1px solid black;
   border-collapse: collapse;
 `;
