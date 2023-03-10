@@ -8,7 +8,7 @@ import {
   Button,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import SendIcon from "@mui/icons-material/Send";
+import EditIcon from "@mui/icons-material/Edit";
 import React, { useEffect, useState } from "react";
 import { getUsers, deleteUser } from "../service/api";
 import { Link } from "react-router-dom";
@@ -59,7 +59,7 @@ const Users = () => {
                     style={{ "margin-right": "5%" }}
                     component={Link}
                     to={`/edit/${item.id}`}
-                    endIcon={<SendIcon />}
+                    endIcon={<EditIcon />}
                   >
                     Edit
                   </Button>

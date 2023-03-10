@@ -21,9 +21,6 @@ const AddUsers = () => {
   const [userInfo, setUserInfo] = useState(initialValues);
   const navigate = useNavigate();
   const handleUserInput = (e) => {
-    if (e.target.value.length < 2) {
-      alert("helo");
-    }
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
   const addUserDetails = async () => {
@@ -32,7 +29,9 @@ const AddUsers = () => {
   };
   return (
     <Container>
-      <Typography variant="h5">Add User</Typography>
+      <Typography variant="h5" align="center">
+        Add User
+      </Typography>
       <FormControl>
         <InputLabel>Name</InputLabel>
         <Input onChange={(e) => handleUserInput(e)} name="name" />

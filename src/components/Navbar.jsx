@@ -7,7 +7,8 @@ const Navbar = () => {
     <div>
       <Header position="static">
         <NavItems>
-          <Tabs to="/">React CRUD</Tabs>
+          <Tabs to="/">PLAYUSERDATA</Tabs>
+          <Tabs to="/">Home</Tabs>
           <Tabs to="/users">Users</Tabs>
           <Tabs to="/addusers">Add User</Tabs>
         </NavItems>
@@ -18,8 +19,8 @@ const Navbar = () => {
 
 export default Navbar;
 const Header = styled(AppBar)`
-  background: black;
-  width:100%;
+  background: #330e62;
+  width: 100%;
 `;
 const NavItems = styled(Toolbar)`
   display: flex;
@@ -31,4 +32,5 @@ const Tabs = styled(NavLink)`
   margin-right: 1em;
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
 `;

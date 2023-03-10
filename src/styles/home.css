@@ -1,0 +1,93 @@
+.homeWrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.bodyWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.bodyWrapper .bodyText {
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
+}
+.bodyWrapper .bodyText h2 {
+  color: #482880;
+}
+.bodyWrapper .bodyText span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.bodyWrapper .bodyImage {
+  width: 40%;
+  padding: 1em;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  animation-name: bounce;
+  animation-timing-function: linear;
+}
+.bodyWrapper .bodyImage img {
+  box-shadow: 0 0 5px gray;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bodyContent {
+  background-color: #4a148c;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+  height: 50vh;
+}
+.bodyContent .bodyTitle {
+  font-size: 2rem;
+  padding: 1em;
+}
+.bodyContent .bodycontent {
+  font-size: 1.2rem;
+  padding: 1em;
+}
+
+.features {
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+}
+.features .featuresTitle {
+  padding: 1em;
+  color: #330e62;
+}
+.features .featuresTitle h3 {
+  font-size: 2rem;
+}
+.features .featuresTitle span {
+  font-size: 1.2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1em;
+  margin: auto auto 1em auto;
+  background-color: #330e62;
+  color: white;
+}/*# sourceMappingURL=home.css.map */
